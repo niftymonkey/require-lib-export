@@ -4,7 +4,10 @@ This is an attempt to work through the options for exporting a javascript librar
 
 ## Intent
 
-The intent is to be able to export a javascript library that will allow the user to use that library with minimal effort.
+The goal of this experiment is to show how to do the following with your [RequireJS][1]-enabled library:
+* Export your javascript library module.
+* Ensure that none of your module dependencies leak out into global space.
+* Show how to reduce or remove the knowledge of [RequireJS][1] for users of your library.
 
 ## Motivation
 
