@@ -1,0 +1,80 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Require-lib-export</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Require-lib-export</h1>
+    </header>
+    <div id="container">
+      <p class="tagline"></p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/niftymonkey/require-lib-export/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/niftymonkey/require-lib-export/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/niftymonkey/require-lib-export" class="code">View Require-lib-export on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h2>Synopsis</h2>
+
+<p>This is an attempt to work through the options for exporting a javascript library that uses <a href="http://requirejs.org/">RequireJS</a>.</p>
+
+<h2>Intent</h2>
+
+<p>The goal of this experiment is to show how to do the following with your <a href="http://requirejs.org/">RequireJS</a>-enabled library:</p>
+
+<ul>
+<li>Export your javascript library module.</li>
+<li>Ensure that none of your module dependencies leak out into global space.</li>
+<li>Show how to reduce or remove the knowledge of <a href="http://requirejs.org/">RequireJS</a> for users of your library.</li>
+</ul><h2>Motivation</h2>
+
+<p>In the process of trying to build a modular and reusable component library, I understandably came to the conclusion that I would want to 
+use an <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a> script loader.  I chose <a href="http://requirejs.org/">RequireJS</a> to handle that.  However, I quickly realized that if I wanted to ensure that the
+library was going to meet my expectations, I'd have to have a better understanding of how the loader did its thing.</p>
+
+<p>As a result, I have created this example project as a reference for how to accomplish this. </p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/niftymonkey" class="avatar"><img src="https://secure.gravatar.com/avatar/629f2df824ba456b039bcb2d43684c1a?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/niftymonkey">niftymonkey</a> maintains <a href="https://github.com/niftymonkey/require-lib-export">Require-lib-export</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/niftymonkey/require-lib-export/tarball/master" class="tar">tar</a><a href="https://github.com/niftymonkey/require-lib-export/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
