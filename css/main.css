@@ -40,11 +40,12 @@ header span {
 }
 .content {
     width: 960px;
+    height: 100%;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    border-left: 1px solid rgba(0, 0, 0, 0.15); /* solid border */
-    border-right: 1px solid rgba(0, 0, 0, 0.15); /* solid border */
+    border-left: 1px solid rgba(0, 0, 0, 0.05); /* solid border */
+    border-right: 1px solid rgba(0, 0, 0, 0.05); /* solid border */
 }
 
 .content a.back {
