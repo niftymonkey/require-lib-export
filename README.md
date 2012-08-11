@@ -12,8 +12,10 @@ The goal of this experiment is to show how to do the following with your [Requir
 ## Motivation
 
 In the process of trying to build a modular and reusable component library, I understandably came to the conclusion that I would want to 
-use an [AMD][2] script loader.  I chose [RequireJS][1] to do this for me.  However, I quickly realized that to do exactly what I want, 
-I'd have to have a better understanding of how the loader did its thing.
+use an [AMD][2] script loader.  I chose [RequireJS][1] to handle that.  However, I quickly realized that if I wanted to ensure that the
+library was going to meet my expectations, I'd have to have a better understanding of how the loader did its thing.
+
+As a result, I have created this example project as a reference for how to accomplish this. 
 
 
 [1]: http://requirejs.org/
