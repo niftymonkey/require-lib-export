@@ -1,0 +1,55 @@
+html, body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    color: #333333;
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15); /* border on the bottom of header so the content can go "under" it */
+    background: rgba(242, 242, 242, 1); /* no alpha so that the content scrolling under can't be seen */
+    position: fixed; /* fixed so that it doesn't scroll */
+    top: -1px; /* this would be 0, but you could see the scrolling content at the top behind the header, so going -1 */
+    left: 0;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    z-index: 999;
+
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    overflow: auto;
+    position: relative;
+    top: 70px;
+    left: 0;
+}
+
+.content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.content ul li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25); /* solid border */
+    border-radius: 10px; /* rounded corners (top, right, bottom, left) */}
