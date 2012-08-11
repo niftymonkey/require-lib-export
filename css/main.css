@@ -1,4 +1,4 @@
-html, body, h1, h2, h3, h4, h5, h6 {
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, a {
     margin: 0;
     padding: 0;
 }
@@ -7,22 +7,19 @@ html, body {
     color: #333333;
     font-family: Verdana, Geneva, sans-serif;
     height: 100%;
-    width: 100%;
-    margin: 0;
     padding: 0;
+    position: relative;
     overflow: hidden;
 }
 
 header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); /* border on the bottom of header so the content can go "under" it */
     background: rgba(242, 242, 242, 1); /* no alpha so that the content scrolling under can't be seen */
-    position: fixed; /* fixed so that it doesn't scroll */
-    top: -1px; /* this would be 0, but you could see the scrolling content at the top behind the header, so going -1 */
-    left: 0;
+    position: relative;
     padding: 10px;
-    height: 40px;
     width: 100%;
     z-index: 999;
+    text-align: center;
 
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
     -o-box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
@@ -31,25 +28,45 @@ header {
 }
 
 header h1 {
-    text-align: center;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
+header span {
+    width: 100%;
+    display: block;
+    margin-left: 2px;
+    font-size: .8em;
+}
 .content {
-    overflow: auto;
-    position: relative;
-    top: 70px;
-    left: 0;
-}
-
-.content ul {
-    margin: 0;
-    padding: 0;
-}
-
-.content ul li {
-    list-style: none;
-    margin: 10px;
+    width: 960px;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.15); /* solid border */
+    border-right: 1px solid rgba(0, 0, 0, 0.15); /* solid border */
+}
+
+.content a.back {
+    float: right;
+    font-size: .9em;
+}
+
+.example-list li {
+    list-style: none;
+    display: block;
     border: 1px solid rgba(0, 0, 0, 0.25); /* solid border */
-    border-radius: 10px; /* rounded corners (top, right, bottom, left) */}
+    border-radius: 3px;
+}
+
+.example-list a {
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    background-color: #EEE;
+}
+
+.example-list span {
+    display: block;
+    padding: 10px;
+}

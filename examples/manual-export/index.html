@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Manual Export</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../../css/main.css">
+        <script data-main="js/myLib" src="js/require.js"></script>
+        <script type="text/javascript">
+            function hello() {
+                var helloObj = new MyLib.HelloModule();
+                helloObj.hello();
+            }
+            function helloMark() {
+                var helloObj = new MyLib.HelloModule("Mark");
+                helloObj.hello();
+            }
+            function showTitle() {
+                MyLib.showPageTitle();
+            }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Manual Export</h1>
+            <span class="caption">Example showing the export of a library by manually adding the library object into the global window object</span>
+        </header>
+        <section class="content">
+            <button onclick="hello()">Hello</button>
+            <button onclick="helloMark()">Hello Mark</button>
+            <button onclick="showTitle()">Show Page Title</button>
+            <a class="back" href="../../index.html">Back To Examples List</a>
+        </section>
+    </body>
+</html>
