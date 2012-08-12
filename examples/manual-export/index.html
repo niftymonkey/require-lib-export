@@ -29,6 +29,46 @@
             <span class="caption">Example showing the export of a library by manually adding the library object into the global window object</span>
         </header>
         <section class="content">
+            As you can see from inspecting the <code><a href="js/myLib.js">js/mylib</a></code> file in the require script tag, the library
+            exports both a <code>HelloModule()</code> constructor function and a <code>showPageTitle()</code> helper function.
+            
+            The library is simultaneosly created and exposed in the require-based closure by creating the MyLib literal directly on the 
+            global <code>window</code> object, like so:
+
+            <pre>
+    require(['jquery', 'helloModule'], function($, HelloModule) {
+        "use strict";
+    
+        window.MyLib = {
+    
+            HelloModule: HelloModule,
+            
+            showPageTitle: function () {
+                var url = $(document).attr('title');
+                alert(url);
+            }
+        };
+        
+        console.log("Library Loaded");
+    
+    });
+            </pre>
+            
+            Those functions are then called using the following in-page functions and tied to the buttons below
+            <pre>
+    function hello() {
+        var helloObj = new MyLib.HelloModule();
+        helloObj.hello();
+    }
+    function helloMark() {
+        var helloObj = new MyLib.HelloModule("Mark");
+        helloObj.hello();
+    }
+    function showTitle() {
+        MyLib.showPageTitle();
+    }                
+            </pre>
+            <hr />
             <button onclick="hello()">Hello</button>
             <button onclick="helloMark()">Hello Mark</button>
             <button onclick="showTitle()">Show Page Title</button>
