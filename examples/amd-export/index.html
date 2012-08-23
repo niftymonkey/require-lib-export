@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Manual Export</title>
+        <title>AMD-Based Export Example</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -25,35 +25,40 @@
     </head>
     <body>
         <header class="header">
-            <h1>Manual Export</h1>
-            <span class="caption">Example showing the export of a library by manually adding the library object into the global window object</span>
+            <h1>AMD-Based Export</h1>
+            <span class="caption">Example showing the export of a library that uses AMD to define its modules and dependencies, and that 
+                manually adds itself into the global window object</span>
         </header>
         <section class="content">
             As you can see from inspecting the <code><a href="js/myLib.js">js/mylib</a></code> file in the require script tag, the library
-            exports both a <code>HelloModule()</code> constructor function and a <code>showPageTitle()</code> helper function.
-            
-            The library is simultaneosly created and exposed in the require-based closure by creating the MyLib literal directly on the 
-            global <code>window</code> object, like so:
+            exposes both a <code>HelloModule()</code> constructor function and a <code>showPageTitle()</code> helper function.
 
+            The library is simultaneosly created with a define:
             <pre>
-    require(['jquery', 'helloModule'], function($, HelloModule) {
+    define(['require', 'jquery', 'helloModule'], function(require) {
         "use strict";
-    
-        window.MyLib = {
-    
-            HelloModule: HelloModule,
-            
-            showPageTitle: function () {
-                var url = $(document).attr('title');
-                alert(url);
-            }
-        };
-        
-        console.log("Library Loaded");
-    
+
+        ... library definition ...
+                    
+        // return our library object
+        return lib;
     });
             </pre>
-            
+
+            and exposed in the require-based closure by adding the MyLib literal to the global <code>window</code> object that is passed in,
+            like so:
+
+            <pre>
+    (function (global) {
+        "use strict";
+    
+        require(['require', 'myLib'], function (require) {
+            global["MyLib"] = require("myLib");
+        });
+    
+    }(window)); // window is the global we'll attach our lib to
+                </pre>
+
             Those functions are then called using the following in-page functions and tied to the buttons below
             <pre>
     function hello() {
