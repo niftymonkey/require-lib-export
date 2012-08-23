@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -30,8 +30,16 @@
                 manually adds itself into the global window object</span>
         </header>
         <section class="content">
-            As you can see from inspecting the <code><a href="js/myLib.js">js/mylib</a></code> file in the require script tag, the library
-            exposes both a <code>HelloModule()</code> constructor function and a <code>showPageTitle()</code> helper function.
+
+            <button onclick="hello()">Hello</button>
+            <button onclick="helloMark()">Hello Mark</button>
+            <button onclick="showTitle()">Show Page Title</button>
+            <a class="back" href="../../index.html">Back To Examples List</a>
+
+            <hr/>
+            
+            As you can see from inspecting the <code><a href="js/myLib.js">js/mylib</a></code> file in the require script tag, the 
+            library exposes both a <code>HelloModule()</code> constructor function and a <code>showPageTitle()</code> helper function.
 
             The library is simultaneosly created with a define:
             <pre>
@@ -73,11 +81,6 @@
         MyLib.showPageTitle();
     }                
             </pre>
-            <hr />
-            <button onclick="hello()">Hello</button>
-            <button onclick="helloMark()">Hello Mark</button>
-            <button onclick="showTitle()">Show Page Title</button>
-            <a class="back" href="../../index.html">Back To Examples List</a>
         </section>
     </body>
 </html>
