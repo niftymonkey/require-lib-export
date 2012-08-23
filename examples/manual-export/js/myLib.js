@@ -7,7 +7,7 @@ require.config({
         jquery: "libs/jquery-1.7.2-min",
         
         // Internal library modules
-        helloModule: "helloModule"
+        helloModule: "myLib/helloModule"
     }
     
 });
@@ -24,8 +24,8 @@ require(['jquery', 'helloModule'], function($, HelloModule) {
         HelloModule: HelloModule,
         
         // helper function that uses jQuery
-        showPageTitle: function () {
-            var url = $(document).attr('title');
+        showPageTitle: function (pageDocumentObject) {
+            var url = $(pageDocumentObject).attr('title');
             alert(url);
         }
     };
