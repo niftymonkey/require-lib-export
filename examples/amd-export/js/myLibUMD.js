@@ -29,7 +29,7 @@ if (typeof require === 'function' && require.config) {
 
         define(['require', 'jquery', 'helloModule'], function(require) {
             console.log("AMD");
-            root["MyLib"] = factory(require);  // attach the library to the global root object
+            return factory(require);  // attach the library to the global root object
         });
 
         // otherwise, use browser globals
